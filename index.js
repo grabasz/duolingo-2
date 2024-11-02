@@ -1,7 +1,7 @@
 try {
 	// const currentTime = +new Date();
 	const currentTime = +new Date("2024-10-31T16:45:30");
-	
+	console.log(currentTime);
 	process.env.LESSONS = process.env.LESSONS ?? 1;
 
 	const headers = {
@@ -14,6 +14,8 @@ try {
 	const { sub } = JSON.parse(
 		Buffer.from(process.env.DUOLINGO_JWT.split(".")[1], "base64").toString(),
 	);
+
+	console.log(sub);
 
 	const { fromLanguage, learningLanguage } = await fetch(
 		`https://www.duolingo.com/2017-06-30/users/${sub}?fields=fromLanguage,learningLanguage`,
