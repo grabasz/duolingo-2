@@ -8,6 +8,11 @@ on:
         description: 'Number of lessons to be completed'
         required: false
         type: number
+      date:
+        default: '2024-10-10'
+        description: 'Lesson date'
+        required: false
+        type: string
 
 jobs:
   study:
@@ -19,3 +24,4 @@ jobs:
         env:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
           LESSONS: ${{ inputs.lessons }}
+          LESSON_DATE: ${{ inputs.date }}
