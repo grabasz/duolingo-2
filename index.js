@@ -1,6 +1,6 @@
 try {
 	// const currentTime = +new Date();
-	const currentTime = +new Date("2024-10-12T16:45:30");
+	const currentTime = +new Date("2024-10-13T16:45:30");
 	console.log(currentTime);
 	process.env.LESSONS = process.env.LESSONS ?? 1;
 
