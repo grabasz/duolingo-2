@@ -1,10 +1,12 @@
 try {
 	// const currentTime = +new Date();
 	
-	console.log(currentTime);
 	process.env.LESSONS = process.env.LESSONS ?? 1;
 	process.env.LESSON_DATE = +new Date(`${process.env.LESSON_DATE}T16:45:30`)  ?? +new Date();
 	const currentTime = process.env.LESSON_DATE;
+
+	console.log(currentTime);
+
 	
 	const headers = {
 		"Content-Type": "application/json",
