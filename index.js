@@ -1,4 +1,7 @@
 try {
+	const currentTime = +new Date();
+	//const currentTime = new Date();
+	
 	process.env.LESSONS = process.env.LESSONS ?? 1;
 
 	const headers = {
@@ -103,9 +106,9 @@ try {
 				body: JSON.stringify({
 					...session,
 					heartsLeft: 0,
-					startTime: (+new Date() - 60000) / 1000,
+					startTime: (currentTime - 60000) / 1000,
 					enableBonusPoints: false,
-					endTime: +new Date() / 1000,
+					endTime: currentTime / 1000,
 					failed: false,
 					maxInLessonStreak: 9,
 					shouldLearnThings: true,
