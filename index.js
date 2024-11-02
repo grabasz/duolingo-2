@@ -1,9 +1,11 @@
 try {
 	// const currentTime = +new Date();
-	const currentTime = +new Date("2024-10-28T16:45:30");
+	
 	console.log(currentTime);
 	process.env.LESSONS = process.env.LESSONS ?? 1;
-
+	process.env.LESSON_DATE = +new Date(`${process.env.LESSON_DATE}T16:45:30`)  ?? +new Date();
+	const currentTime = process.env.LESSON_DATE;
+	
 	const headers = {
 		"Content-Type": "application/json",
 		Authorization: `Bearer ${process.env.DUOLINGO_JWT}`,
